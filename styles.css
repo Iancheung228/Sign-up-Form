@@ -1,0 +1,94 @@
+.page {
+    display: flex;
+    height: 100vh; /* full viewport height */
+  }
+  
+  /* Left section: 35% width */
+  .left {
+    flex: 0 0 35%;     /* don't grow or shrink, fixed at 35% */
+    overflow: hidden;
+  }
+  
+  /* Image fills the left container */
+  .left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Right section: takes up remaining space (65%) */
+  .right {
+    flex: 1;           /* grows to fill the rest (65%) */
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+
+  .user-form {
+    display: flex;
+    flex-direction: column;   /* Stack rows vertically */
+    max-width: 600px;         /* Maximum width of the form */
+    margin: 20px auto;        /* Center the form horizontally */
+    padding: 20px;            /* Add padding inside the form */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px;       /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  }
+  .form-row {
+    display: flex;            /* Place inputs in a row */
+    gap: 20px;                /* Spacing between each input */
+    justify-content: space-between; /* Spread items evenly */
+  }
+  /* Each form group (label + input) */
+.form-group {
+    display: flex;
+    flex-direction: column;   /* Stack label on top of input */
+    flex: 1;                  /* Take up equal space in the row */
+}
+  
+/* Style the labels */
+label {
+    font-size: 14px;
+    font-weight: 600;         /* Make labels bold */
+    color: #333;              /* Dark text color for contrast */
+    margin-bottom: 5px;       /* Space between label and input */
+}
+  .user-form input {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  /* Style the inputs */
+input {
+    padding: 10px;
+    font-size: 14px;          /* Set font size */
+    margin-top: 5px;          /* Space between label and input */
+    border-radius: 4px;
+    border: 1px solid #ccc;   /* Light border for inputs */
+    width: 100%;              /* Make inputs take up full width of form-group */
+    box-sizing: border-box;   /* Include padding in width calculation */
+}
+
+  /* Style the submit button */
+button {
+    padding: 12px 20px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;         /* Space above the button */
+    width: 100%;              /* Button takes up full width of form */
+}
+
+.user-form button:hover {
+    background-color: #357ae8;
+  }
+
+  input[type="password"]:invalid:not(:placeholder-shown) {
+    border: 2px solid red;
+  }
+  
